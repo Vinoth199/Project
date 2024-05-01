@@ -1,0 +1,16 @@
+drwxrwxr-x 2 vinoth vinoth 4096 Feb 13 11:03 home
+vinoth@KannadiThirai:~/Guvi$ cd  home
+vinoth@KannadiThirai:~/Guvi/home$ ls -lrt
+total 0
+-rw-rw-r-- 1 vinoth vinoth 0 Feb 13 11:03 demo.txt
+vinoth@KannadiThirai:~/Guvi/home$ pwd
+/home/vinoth/Guvi/home
+vinoth@KannadiThirai:~/Guvi/home$ ls -lrt
+total 0
+-rw-rw-r-- 1 vinoth vinoth 0 Feb 13 11:03 demo.txt
+vinoth@KannadiThirai:~/Guvi/home$ chmod 764 demo.txt 
+vinoth@KannadiThirai:~/Guvi/home$ ls -lrt
+total 0
+-rwxrw-r-- 1 vinoth vinoth 0 Feb 13 11:03 demo.txt
+vinoth@KannadiThirai:~/Guvi/home$ 
+

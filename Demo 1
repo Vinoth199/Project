@@ -1,0 +1,50 @@
+vinoth@KannadiThirai:~/Guvi$ for i in {1..20}; do touch file$i.txt; done
+vinoth@KannadiThirai:~/Guvi$ ls -lrt
+total 4
+drwxrwxr-x 2 vinoth vinoth 4096 Feb 13 11:03 home
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file2.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file1.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file5.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file4.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file3.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file7.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file6.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file9.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file8.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file13.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file12.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file11.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file10.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file15.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file14.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file17.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file16.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file20.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file19.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file18.txt
+vinoth@KannadiThirai:~/Guvi$ find . -type f -name 'file*.txt' | head -5 | while read -r file; do mv "$file" "${file%.txt}.yml"; done
+vinoth@KannadiThirai:~/Guvi$ ls -lrt
+total 4
+drwxrwxr-x 2 vinoth vinoth 4096 Feb 13 11:03 home
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file2.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file1.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file5.yml
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file4.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file3.yml
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file7.yml
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file6.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file9.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file8.yml
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file13.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file12.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file11.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file10.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file15.yml
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file14.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file17.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file16.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file20.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file19.txt
+-rw-rw-r-- 1 vinoth vinoth    0 Feb 13 11:37 file18.txt
+vinoth@KannadiThirai:~/Guvi$ 
+
